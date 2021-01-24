@@ -3,10 +3,15 @@
 package com.example.demo.service.math;
 
 import com.example.demo.model.math.TestResult;
+import com.example.demo.utils.MathBuilder;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+@RequiredArgsConstructor
 @Service
 public class MathService {
+    private final MathBuilder mathBuilder;
+
     public Double sumMate(Double one, Double two){
          return one + two;
      }
@@ -53,5 +58,16 @@ public class MathService {
                  throw new RuntimeException("Deu erro");
          }
 
+    }
+
+    public TestResult testeResultDois(Double one, Double two)
+    {
+        TestResult result = mathBuilder.mathServiceBuilder(sumMate(one, two),
+                subMate(one, two),
+                multiMate(one, two),
+                divMate(one, two),
+                sqrtMate(one),
+                powMate(one, two));
+        return result;
     }
 }

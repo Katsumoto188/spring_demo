@@ -111,6 +111,7 @@ com\example\demo\model\request\complete\AlbumCompleteRequest.class
 com\example\demo\model\response\complete\TodoCompleteResponse.class
 com\example\demo\repository\TodoRepository.class
 com\example\demo\model\request\complete\PostCompleteRequest.class
+com\example\demo\utils\MathBuilder.class
 com\example\demo\model\response\UserResponse$UserResponseBuilder.class
 com\example\demo\model\domain\complete\AlbumCompleteDomain.class
 com\example\demo\model\request\CommentRequest.class
